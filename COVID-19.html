@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Information</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.covid-container {
+    border: 5px solid #967d21;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.covid-header {
+    margin-bottom: 15px;
+}
+
+.covid-heading {
+    color: #323f4b;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn {
+    border-radius: 6px;
+    border: none;
+}
+
+.test-card-container {
+    background-color: #967d21;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.test-text-container {
+    font-family: "Roboto", sans-serif;
+    padding: 5px;
+}
+
+.test-heading, .symptom-heading, .b-heading, .m-heading {
+    color: #323f4b;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.test-paragraph {
+    font-size: 16px;
+    color: #707070;
+    font-weight: 500;
+}
+
+.test-card-img-container, .footer-img-container {
+    height: 48px;
+    width: 48px;
+    margin: 10px;
+}
+
+.symptom-card {
+    margin-bottom: 5px;
+}
+
+.symptom-card-bg-f, .symptom-card-bg-c, .symptom-card-bg-g {
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+.symptom-card-bg-f { background-color: #3ebd93; }
+.symptom-card-bg-c { background-color: #e668a7; }
+.symptom-card-bg-g { background-color: #a368fc; }
+
+.footer-card-container {
+    background-color: rgba(225, 45, 57, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.footer-text-container {
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+}
+
+.paragraph {
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+</style>
+<body>
+    <div class="container border p-4">
+        <div class="text-center mb-4">
+            <h1 class="text-primary">All You Need to Know About COVID-19</h1>
+            <button class="btn btn-primary">Know More</button>
+        </div>
+        <div class="d-flex flex-row align-items-center justify-content-between bg-light p-3 rounded">
+            <div>
+                <h2 class="text-dark">COVID-19 Test</h2>
+                <p class="text-muted">If you have been exposed to novel coronavirus (COVID-19)... <a href="#">more</a></p>
+            </div>
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/coronavirus-img.png" alt="Coronavirus" class="img-fluid" width="50">
+        </div>
+        <h2 class="mt-4">Symptoms</h2>
+        <div class="row">
+            <div class="col-md-4 text-center bg-success text-white p-3 rounded">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/cough-img.png" alt="Dry Cough" class="img-fluid">
+                <h4>Dry Cough</h4>
+            </div>
+            <div class="col-md-4 text-center bg-danger text-white p-3 rounded">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/fever-img.png" alt="High Fever" class="img-fluid">
+                <h4>High Fever</h4>
+            </div>
+            <div class="col-md-4 text-center bg-primary text-white p-3 rounded">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/headache-img.png" alt="Headache" class="img-fluid">
+                <h4>Headache</h4>
+            </div>
+        </div>
+        <h2 class="mt-4">Videos</h2>
+        <div class="d-flex flex-row align-items-center bg-warning p-3 rounded">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/doctor-img.png" alt="Doctor" class="img-fluid" width="50">
+            <div class="ml-3">
+                <h4>To Prevent the Spread...</h4>
+                <p>If you have been exposed to novel coronavirus (COVID-19)...</p>
+                <button class="btn btn-dark">Watch Video</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

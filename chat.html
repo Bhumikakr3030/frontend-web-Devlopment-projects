@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .chat-page-img {
+            background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/chatbg.png");
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+        }
+
+        .chat-header {
+            background-color: #323f4b;
+            text-align: center;
+            padding: 18px;
+            font-size: 20px;
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            padding: 10px;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        .sent-message,
+        .received-message {
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 60%;
+            word-wrap: break-word;
+            margin: 5px 0;
+        }
+
+        .sent-message {
+            background-color: #47a3f3;
+            align-self: flex-end;
+            text-align: right;
+        }
+
+        .received-message {
+            background-color: #52606d;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-page-img">
+        <h1 class="chat-header">Rahul</h1>
+        <div class="chat-container">
+            <p class="sent-message">Hello Rahul, how are you?</p>
+            <p class="received-message">Hi Varakumar, I am good. How are you?</p>
+            <p class="sent-message">I'm fine. I published my website recently.</p>
+            <p class="received-message">Oh great Varakumar! Can you send me the URL?</p>
+            <p class="sent-message">https://varakumar.ccbp.tech</p>
+            <p class="received-message">Awesome Varakumar, where did you learn?</p>
+            <p class="sent-message">NxtWave CCBP 4.0 Program</p>
+        </div>
+    </div>
+</body>
+
+</html>

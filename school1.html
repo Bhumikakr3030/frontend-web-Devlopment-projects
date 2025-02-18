@@ -1,0 +1,115 @@
+
+<html>
+<head>
+    <title>School Management System</title>
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #666;
+        }
+        form {
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="number"], select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>School Management System</h1>
+        
+        <h2>Student Registration</h2>
+        <form>
+            <input type="text" placeholder="Student Name">
+            <input type="text" placeholder="Student ID">
+            <input type="text" placeholder="Grade">
+            <input type="submit" value="Register Student">
+        </form>
+        
+        <h2>Course Registration</h2>
+        <form>
+            <input type="text" placeholder="Course Name">
+            <input type="text" placeholder="Course Code">
+            <input type="number" placeholder="Credit Hours">
+            <input type="submit" value="Add Course">
+        </form>
+        
+        <h2>Student Information</h2>
+        <table>
+            <tr>
+                <th>Student Name</th>
+                <th>Student ID</th>
+                <th>Grade</th>
+            </tr>
+            <!-- Sample student data -->
+            <tr>
+                <td>John Doe</td>
+                <td>123456</td>
+                <td>A</td>
+            </tr>
+        </table>
+        
+        <h2>Course Information</h2>
+        <table>
+            <tr>
+                <th>Course Name</th>
+                <th>Course Code</th>
+                <th>Credit Hours</th>
+            </tr>
+            <!-- Sample course data -->
+            <tr>
+                <td>Mathematics</td>
+                <td>MATH101</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

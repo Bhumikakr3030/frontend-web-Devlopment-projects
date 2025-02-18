@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+    .mobile-img {
+        max-width: 90vw;
+        height: auto;
+    }
+
+    .details-container {
+        border-style: solid;
+        border-width: 2px;
+        border-color: #707070;
+        padding: 20px;
+        width: 90vw;
+    }
+
+    .details-heading {
+        font-family: "Roboto";
+        color: #0a1f44;
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    .detail-item {
+        color: #0a1f44;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        margin-top: 15px;
+        font-weight: 500;
+    }
+</style>
+
+<body>
+    <div class="bg-container">
+        <img class="mobile-img" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/iphoneX-bg.png" alt="iPhone X" />
+        <div class="details-container">
+            <h1 class="details-heading">Specifications</h1>
+            <ul>
+                <li class="details-item">3 GB RAM</li>
+                <li class="details-item">5.80 Super Retina HD OLED Display</li>
+                <li class="details-item">Rear Camera 12MP+12MP</li>
+                <li class="details-item">Apple A11 Bionic Processor</li>
+                <li class="details-item">Battery Capacity 2716mAH</li>
+            </ul>
+            <div class="d-flex flex-row justify-content-center">
+                <!-- Button trigger modal -->
+                <button class="btn btn-primary" data-toggle="modal" data-target="#productModal">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Product Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li><strong>Price:</strong> ₹50,000</li>
+                        <li><strong>Contact Us:</strong> +91-1234567890</li>
+                        <li><strong>EMI:</strong> Available starting at ₹2,500/month</li>
+                        <li><strong>Service Info:</strong> 1-year warranty with free service for 6 months</li>
+                        <li><strong>Phone No.:</strong> +91-9876543210</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Proceed with Purchase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

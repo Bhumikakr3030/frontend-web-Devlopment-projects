@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+        .bg-container {
+            background-color: #ffedcb;
+            height: 105vh;
+            background-size: cover;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .img-container {
+            background-image: url("https://assets.ccbp.in/frontend/static-website/yoga-bg.png");
+            background-size: cover;
+            height: 60vh;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .heading {
+            font-family: "Roboto", sans-serif;
+            font-size: 28px;
+            color: #253263;
+            font-weight: bold;
+        }
+
+        .paragraph {
+            font-size: 18px;
+            color: #323f4f;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .button {
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            background-color: #253263;
+            border-radius: 4px;
+            font-size: 14px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            margin-top: 20px;
+        }
+
+        .yoga-bg-container {
+            background-color: #ffedcb;
+            padding: 50px 0;
+        }
+
+        .yoga-img {
+            height: 240px;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .yoga-card-container {
+            background-color: #ffe2ab;
+            margin: 15px;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .yoga-type-img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+        }
+
+        .yoga-heading, .para {
+            font-family: "Roboto", sans-serif;
+            font-size: 22px;
+            color: #132d84;
+            font-weight: bold;
+        }
+
+        .button-back {
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            background-color: #132d84;
+            border-radius: 4px;
+            font-size: 14px;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            margin-top: 20px;
+        }
+
+        /* Pop-up style for the back button */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .popup-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .popup ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .popup ul li {
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+            color: #132d84;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .popup ul li:hover {
+            text-decoration: underline;
+        }
+
+        .close-popup {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sectionhome">
+        <div class="bg-container">
+            <div class="img-container">
+                <h1 class="heading">Discover the yogi life on the Yoga Experience Platform</h1>
+                <p class="paragraph">Yoga poses strengthen and open tight areas of the body</p>
+            </div>
+            <img class="home-img" src="https://assets.ccbp.in/frontend/static-website/yoga-girl-with-headphones-img.png" />
+            <p class="paragraph">Yoga poses strengthen and open tight areas of the body.</p>
+            <button class="button" onclick="display('sectionyogapage')">Get Started</button>
+        </div>
+    </div>
+
+    <div id="sectionyogapage" class="yoga-bg-container">
+        <div class="text-center">
+            <img class="yoga-img" src="https://assets.ccbp.in/frontend/static-website/yoga-girl-without-headphones-img.png" />
+            <h1 class="heading">Types of Yoga</h1>
+        </div>
+
+        <div class="yoga-card-container">
+            <img src="https://assets.ccbp.in/frontend/static-website/yoga-card1-img.png" class="yoga-type-img" />
+            <h1 class="yoga-heading">Acro Yoga</h1>
+            <p class="para">It stretches and relaxes your body. Improves stamina and memory.</p>
+        </div>
+
+        <div class="yoga-card-container">
+            <img src="https://assets.ccbp.in/frontend/static-website/yoga-card2-img.png" class="yoga-type-img" />
+            <h1 class="yoga-heading">Vinyasa Yoga</h1>
+            <p class="para">It serves as a training to increase strength and helps to build lean muscle mass throughout the body.</p>
+        </div>
+
+        <div class="yoga-card-container">
+            <img src="https://assets.ccbp.in/frontend/static-website/yoga-card3-img.png" class="yoga-type-img" />
+            <h1 class="yoga-heading">Hatha Yoga</h1>
+            <p class="para">It introduces beginners to the main relaxation technique and asanas.</p>
+        </div>
+
+        <div class="yoga-card-container">
+            <img src="https://assets.ccbp.in/frontend/static-website/yoga-card4-img.png" class="yoga-type-img" />
+            <h1 class="yoga-heading">Kundalini Yoga</h1>
+            <p class="para">It helps relax and restore the mind and the body, improving strength, flexibility, and endurance.</p>
+            <button class="button-back" onclick="showPopup()">Back</button>
+        </div>
+    </div>
+
+    <!-- Pop-up Modal -->
+    <div class="popup-background" id="popup-background"></div>
+    <div class="popup" id="popup">
+        <h2>Select a Yoga Type</h2>
+        <ul>
+            <li onclick="window.location.href='#'">Meditation</li>
+            <li onclick="window.location.href='#'">Hatha Yoga</li>
+            <li onclick="window.location.href='#'">Vinyasa Yoga</li>
+            <li onclick="window.location.href='#'">Kundalini Yoga</li>
+            <li onclick="window.location.href='#'">Acro Yoga</li>
+            <li onclick="window.location.href='#'">Suryanamaskara</li>
+        </ul>
+        <button class="close-popup" onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function display(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('popup-background').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('popup-background').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

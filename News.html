@@ -1,0 +1,175 @@
+
+<html>
+
+<head>
+    <title>NEWS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <style>
+        .bg-container {
+            background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/newsbg.png");
+            height: 10vh;
+            background-size: cover;
+        }
+
+        .news-card {
+            background-color: #ffffff;
+            padding: 25px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            background-size: cover;
+        }
+
+        .news-card-heading {
+            color: #323f4b;
+            font-family: "Roboto";
+            font-size: 12px;
+        }
+
+        .news-card-caption {
+            color: #323f4b;
+            font-family: "Roboto";
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .news-card-paragraph {
+            font-family: "Roboto";
+            font-size: 12px;
+            color: #7b8794;
+        }
+
+        .news-card-button {
+            font-family: "Roboto";
+            color: #ffffff;
+            font-size: 12px;
+            background-color: #323f4b;
+            border-radius: 8px;
+            border-width: 10px;
+            height: 38px;
+            width: 109px;
+            cursor: pointer;
+        }
+
+        /* Modal Style */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close {
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-body button {
+            background-color: #323f4b;
+            color: white;
+            padding: 12px;
+            font-size: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        .modal-body button:hover {
+            background-color: #555;
+        }
+    </style>
+
+    <div class="d-flex flex-row justify-content-center">
+        <div class="bg-container d-flex flex-column justify-content-end">
+            <div class="news-card">
+                <h1 class="news-card-heading">NEWS OF THE DAY</h1>
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/newsbg.png">
+                <p class="news-card-caption">iB Cricket announces world's first
+                    Virtual Reality Cricket League</p>
+                <p class="news-card-paragraph">iB Cricket and Viu have announced the world's
+                    first Virtual Reality Cricket League featuring 12 international
+                    cricketers, who will be competing against each other for
+                    the iB Cricket Super Over League title in Mumbai. Iconic
+                    cricketers like Virender Sehwag, Suresh Raina, Brendon
+                    McCullum will be competing in the league.</p>
+                <button class="news-card-button" id="myBtn">Read more</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Choose a Category</h2>
+            </div>
+            <div class="modal-body">
+                <button>Sports</button>
+                <button>Tech News</button>
+                <button>Space</button>
+                <button>Today's News</button>
+                <button>Movies</button>
+                <button>Events</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal and button
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

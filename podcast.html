@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Layout</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.podcast-bg-container {
+    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/podcasts-bg.png");
+    height: 30vh;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+}
+
+.podcast-heading {
+    color: white;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.podcast-card-container {
+    padding: 25px;
+}
+
+.puri-heading,
+.tedx-heading,
+.sud-heading,
+.on-heading {
+    color: #151765;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.podcast-img {
+    height: auto;
+    width: 100%;
+    max-width: 120px;
+}
+
+.details-card {
+    margin: 10px;
+    text-align: center;
+}
+
+.podcast-header {
+    padding: 20px;
+    background-color: #151765;
+    color: white;
+    text-align: center;
+}
+
+.podcast-text-container {
+    color: white;
+    font-size: 14px;
+}
+
+.puri-episode-container {
+    padding: 15px;
+}
+
+.text-container {
+    padding: 15px;
+}
+
+.btn-primary {
+    background-color: #151765;
+    border: none;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-header {
+    background-color: #151765;
+    color: white;
+}
+
+.modal-body {
+    font-size: 14px;
+    color: #5a7184;
+}
+</style>
+
+<body>
+
+    <div id="sectionhome">
+        <div class="podcast-bg-container">
+            <h1 class="podcast-heading">Podcast</h1>
+        </div>
+    </div>
+
+    <div class="podcast-card-container">
+        <div class="d-flex flex-row">
+            <h1 class="puri-heading">Puri Jagannadh</h1>
+            <p class="puri-p-paragraph">24 Episodes</p>
+            <img class="podcast-img" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/puri-jagannadh-img.png" />
+        </div>
+
+        <div class="details-card">
+            <img class="podcast-img" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/tedx-img.png" />
+            <h1 class="tedx-heading">TEDx Talks</h1>
+            <p class="texdx-paragraph">12 Episodes</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#podcastModal" data-podcast="TEDx Talks" data-episodes="12 Episodes" data-description="In-depth TEDx talks about various inspirational and educational topics.">View More</button>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div class="details-card">
+                <img class="podcast-img" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/sadhguru-img.png" />
+                <h1 class="sud-heading">Sadhguru</h1>
+                <p class="sud-paragraph">49 Episodes</p>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#podcastModal" data-podcast="Sadhguru" data-episodes="49 Episodes" data-description="A collection of wisdom from Sadhguru, focusing on life, spirituality, and inner well-being.">View More</button>
+            </div>
+        </div>
+
+        <div class="details-card">
+            <img class="podcast-img" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/on-purpose-img.png" />
+            <h1 class="on-heading">On Purpose</h1>
+            <p class="on-paragraph">49 Episodes</p>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#podcastModal" data-podcast="On Purpose" data-episodes="49 Episodes" data-description="Purpose-driven discussions on how to live a meaningful and impactful life.">View More</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="podcastModal" tabindex="-1" role="dialog" aria-labelledby="podcastModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="podcastModalLabel">Podcast Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3 id="modalPodcastName"></h3>
+                    <p id="modalEpisodes"></p>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get modal elements
+        $('#podcastModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var podcastName = button.data('podcast');
+            var episodes = button.data('episodes');
+            var description = button.data('description');
+
+            var modal = $(this);
+            modal.find('#modalPodcastName').text(podcastName);
+            modal.find('#modalEpisodes').text(episodes);
+            modal.find('#modalDescription').text(description);
+        });
+    </script>
+</body>
+
+</html>

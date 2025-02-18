@@ -1,0 +1,132 @@
+<html>
+<style>
+.bg-container {
+    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/todolistbg.png");
+    height: 100vh;
+    background-size: cover;
+}
+
+.heading {
+    color: White;
+    text-align: center;
+    font-family: Roboto;
+}
+
+.heading4 {
+    color: White;
+    font-family: Roboto;
+    text-align: left;
+}
+
+.button {
+    background-color: Orange;
+    color: White;
+    padding: 10px;
+    margin: 10px;
+}
+
+.paragraph {
+    text-decoration: underline;
+}
+
+/* Popup style */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 100px;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.popup input {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+}
+
+.popup button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.popup .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.popup .close:hover,
+.popup .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todolist</title>
+</head>
+
+<body>
+    <div class="bg-container">
+        <div class="heading">
+            <h1>Todolist</h1>
+            <p>Each day I will accomplish one thing on my todolist</p>
+
+            <div class="heading4">
+                <h4>Read a Book</h4>
+                <p>I don't think that the human race will survive the next thousand years, unless we spread into space. There are too many accidents that can befall life on a single planet. But I'm an optimist...</p>
+            </div>
+
+            <button class="button" onclick="showPopup()">Add Item</button>
+            <h4>Don't skip introduction</h4>
+        </div>
+
+        <!-- Popup -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2>Type your Todo Item</h2>
+                <input type="text" id="todoInput" placeholder="Enter item">
+                <button onclick="addItem()">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function addItem() {
+            const todoInput = document.getElementById('todoInput').value;
+            if (todoInput) {
+                alert("Item Added: " + todoInput);
+                closePopup();
+            } else {
+                alert("Please enter an item.");
+            }
+        }
+    </script>
+</body>
+
+</html>

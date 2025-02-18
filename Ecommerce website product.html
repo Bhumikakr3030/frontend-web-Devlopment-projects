@@ -1,0 +1,165 @@
+
+
+                                    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        .card {
+            padding: 15px;
+            background-color: white;
+            height: 100vh;
+        }
+
+        .head {
+            color: #183b56;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .head-phone-card {
+            background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/ecommerce-products-headphones-bg.png");
+            height: 50vh;
+            border-radius: 20px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .title {
+            text-align: bottom;
+            color: white;
+        }
+
+        .para {
+            color: white;
+        }
+
+        .products-card-button {
+            margin: 10px;
+            color: #ff9f00;
+            background-color: #ffffff;
+            font-family: "Roboto";
+            font-size: 16px;
+            width: 134px;
+            height: 48px;
+            border-width: 0px;
+            border-radius: 100px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .but {
+            border-width: 1px;
+            border-color: black;
+        }
+
+        .see-all-offer {
+            color: orange;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1 class="head">Our Products</h1>
+        <div class="container">
+            <div class="row">
+                <!-- First Product -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="head-phone-card pl-3 d-flex flex-column justify-content-end">
+                        <h1 class="title">Smart <br>Headphone</h1>
+                        <p class="para">Headphone bluetooth</p>
+                        <div>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="products-card-button" data-toggle="modal" data-target="#exampleModal1">
+                                View Details
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel1">Sony</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            This headphone is used with Bluetooth.<br>
+                                            <span class="highlight">Performance:</span> Good battery life.<br>
+                                            <span class="highlight">Battery:</span> Can be used in offline mode.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-transparent but">Buy Now</button>
+                                            <button type="button" class="btn btn-primary">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Product -->
+                <div class="col-12 col-md-6 mb-3">
+                    <div class="head-phone-card pl-3 d-flex flex-column justify-content-end">
+                        <h1 class="title">Smart <br>Headphone</h1>
+                        <p class="para">Headphone wireless</p>
+                        <div>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="products-card-button" data-toggle="modal" data-target="#exampleModal2">
+                                View Details
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel2">Sony</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            This is good actually!<br>
+                                            <span class="highlight">Performance:</span> Great sound quality.<br>
+                                            <span class="highlight">Battery:</span> Long-lasting performance.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-transparent but">Buy Now</button>
+                                            <button type="button" class="btn btn-primary">Order Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- See All Offers Button -->
+                <span class="see-all-offer">See all offers
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
